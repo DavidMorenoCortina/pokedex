@@ -1,0 +1,58 @@
+.container{
+  @include columns(8);
+  margin: auto;
+}
+
+.row{
+  @include columns(12);
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &:after{
+    display: block;
+    content: " ";
+    clear: both;
+    height: 0;
+  }
+}
+
+@for $i from 1 through 12 {
+  .col-#{$i} {
+    @include columns($i);
+    padding-left: 1rem;
+    padding-right: 1rem;
+    float: left;
+    transition: 400ms;
+
+    &:after {
+      display: block;
+      content: " ";
+      clear: both;
+      height: 0;
+    }
+  }
+}
+
+@for $i from 1 through 12 {
+  @media (max-width: 576px) {
+    .col-#{$i} {
+      width: 100%;
+    }
+  }
+}
+
+@for $i from 1 through 6 {
+  @media (min-width: 576px) and (max-width: 992px) {
+    .col-#{$i} {
+      @include columns(6);
+    }
+  }
+}
+
+@for $i from 7 through 12 {
+  @media (min-width: 576px) and (max-width: 992px) {
+    .col-#{$i} {
+      @include columns(12);
+    }
+  }
+}

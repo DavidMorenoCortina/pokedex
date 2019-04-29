@@ -1,0 +1,113 @@
+.card{
+  display: block;
+  margin-bottom: 30px;
+  box-shadow: $light-black 0 0 5px;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+
+  .image{
+    background: $card-grey;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    padding: 1.3rem 0;
+    transition: 400ms;
+
+    img{
+      display: block;
+      height: 100%;
+      max-height: 96px;
+
+    }
+
+    .poke-id{
+      background: $card-dark-grey;
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      padding: .2rem 1rem;
+      font-size: .9rem;
+      color: $card-red;
+      transition: 400ms;
+    }
+  }
+
+  .info{
+    background: $white;
+    transition: 400ms;
+    overflow: auto;
+    padding: 1rem;
+    box-sizing: content-box;
+    height: calc(96px + 1.3rem);
+
+    h3{
+      font-size: 1.3rem;
+      margin: 0 0 .2rem 0;
+      text-transform: capitalize;
+    }
+
+    .types{
+
+      .type{
+        display: inline-block;
+        padding: .2rem .2rem;
+        margin-right: .4rem;
+        margin-bottom: .4rem;
+        border-radius: 4px;
+        border: 1px solid $card-dark-grey;
+        color: $card-red;
+        font-size: .7rem;
+        text-transform: uppercase;
+      }
+    }
+
+    .evolution-from{
+      padding-left: .2rem;
+      color: $card-red;
+      border-left: 3px solid $card-red;
+      font-size: .9rem;
+
+      span{
+        display: block;
+        color: $black;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  &:hover{
+    transition: 400ms;
+
+    .image{
+      background: $card-dark-grey;
+
+      .poke-id{
+        background: $card-grey;
+      }
+    }
+
+    .info {
+      background: $light-yellow;
+    }
+  }
+}
+
+.selected-pokemon{
+  @for $i from 1 through 12 {
+    .col-#{$i} {
+      width: 0;
+      padding-left: 0;
+      padding-right: 0;
+      overflow: hidden;
+
+      &.selected{
+        width: 100%;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        overflow: auto;
+      }
+    }
+  }
+}

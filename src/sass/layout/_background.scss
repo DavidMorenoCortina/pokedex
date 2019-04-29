@@ -1,0 +1,41 @@
+body{
+  background: $bg;
+}
+
+.bg-upper-decoration{
+  width: 4rem;
+  height: 4rem;
+  clip-path: polygon(0 0, 100% 0, 0 100%);
+  background: $black;
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  &.right{
+    transform: rotateY(180deg);
+    left: initial;
+    right: 0;
+  }
+}
+
+.bg-lower-decoration{
+  width: 6rem;
+  height: 6rem;
+  border-top-right-radius: 6rem;
+  background: $red;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+
+  &.right{
+    border-top-right-radius: 0;
+    border-top-left-radius: 6rem;
+    left: initial;
+    right: 0;
+  }
+}
+
+.bg-upper-decoration,
+.bg-lower-decoration{
+  z-index: -1;
+}

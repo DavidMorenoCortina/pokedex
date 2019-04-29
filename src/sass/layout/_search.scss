@@ -1,0 +1,22 @@
+.search-box{
+  input{
+    width: 100%;
+    background: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    padding: .7rem 1rem;
+    box-shadow: $light-black 0 0 10px;
+    border: none;
+    text-align: center;
+    transition: 400ms;
+
+    &::placeholder{
+      color: $placeholder-color;
+      opacity: 0.5;
+    }
+
+    &:focus{
+      background: rgba(255, 255, 255, 1);
+      transition: 400ms;
+    }
+  }
+}
