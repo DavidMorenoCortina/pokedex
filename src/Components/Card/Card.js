@@ -14,7 +14,7 @@ export default class Card extends Component{
 
         return (
             <div className={"col-4" + addedClassName}>
-                <Link to={path} className="card mb-2">
+                <Link to={process.env.PUBLIC_URL + path} className="card mb-2">
                     <div className="image">
                         <img src={poke.sprites.front_default} alt={poke.name}/>
                         <div className="poke-id">ID / {poke.id}</div>
