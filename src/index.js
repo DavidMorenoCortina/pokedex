@@ -15,7 +15,7 @@ const history = createBrowserHistory();
 const store = createStore(createRootReducer(history), applyMiddleware(thunk, routerMiddleware(history)));
 
 ReactDOM.render(<Provider store={store}>
-    <ConnectedRouter history={history}>
+    <ConnectedRouter history={history} basename="/pokedex">
         <App />
     </ConnectedRouter>
 </Provider>, document.getElementById('root'));

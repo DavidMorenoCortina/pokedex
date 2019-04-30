@@ -13,8 +13,8 @@ class App extends Component {
 
                 <div className="container">
                     <Switch>
-                        <Route exact path="/" component={Index}/>
-                        <Route exact path="/pokemon/:searchTerm/:id" component={Index}/>
+                        <Route exact path={process.env.PUBLIC_URL + "/"} component={Index}/>
+                        <Route exact path={process.env.PUBLIC_URL + "/pokemon/:searchTerm/:id"} component={Index}/>
                     </Switch>
                 </div>
             </div>
