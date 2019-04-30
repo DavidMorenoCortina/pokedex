@@ -5,7 +5,7 @@ export default class Card extends Component{
     render(){
         let poke = this.props.pokemon,
             addedClassName = '',
-            path = '/pokemon/' + poke.id;
+            path = '/pokemon/' + this.props.searchTerm + '/' + poke.id;
 
         if(this.props.isSelectedCard){
             addedClassName = ' selected';

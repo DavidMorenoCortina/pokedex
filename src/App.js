@@ -1,9 +1,8 @@
 import React, {Component} from 'react';
-import SearchBar from "./Components/SearchBar";
 import {Route, Switch} from "react-router";
 import Index from "./pages/Index";
 
-class App extends Component{
+class App extends Component {
     render() {
         return (
             <div>
@@ -13,11 +12,9 @@ class App extends Component{
                 <div className="bg-lower-decoration right"/>
 
                 <div className="container">
-                    <SearchBar/>
-
                     <Switch>
                         <Route exact path="/" component={Index}/>
-                        <Route exact path="/pokemon/:id" component={Index}/>
+                        <Route exact path="/pokemon/:searchTerm/:id" component={Index}/>
                     </Switch>
                 </div>
             </div>

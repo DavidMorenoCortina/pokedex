@@ -1,0 +1,107 @@
+.loading{
+  width: 95px;
+  height: 20px;
+  margin: 5rem auto 0 auto;
+
+  @keyframes dot1 {
+    0%   {
+      margin-left: 0;
+    }
+    25%  {
+      margin-left: 20px;
+    }
+    45%  {
+      margin-left: 0;
+    }
+  }
+
+  @keyframes dot2 {
+    0% {
+      margin-left: 20px;
+      width: 15px;
+    }
+    24% {
+      width: 15px;
+    }
+    25% {
+      margin-left: 0;
+      width: 10px;
+    }
+    44% {
+      width: 10px;
+    }
+    45% {
+      margin-left: 40px;
+      width: 15px;
+    }
+    55% {
+      margin-left: 20px;
+      width: 15px;
+    }
+    69% {
+      width: 15px;
+    }
+    70% {
+      margin-left: 20px;
+      width: 10px;
+    }
+    94% {
+      width: 10px;
+    }
+    95% {
+      margin-left: 0;
+      width: 15px;
+    }
+    100% {
+      margin-left: 20px;
+      width: 15px;
+    }
+  }
+
+  @keyframes dot3 {
+    0% {
+      margin-left: 20px;
+    }
+    25% {
+      margin-left: 20px;
+    }
+    45% {
+      margin-left: 0;
+    }
+    55% {
+      margin-left: 20px;
+    }
+    70% {
+      margin-left: 0;
+    }
+    90% {
+      margin-left: 40px;
+    }
+    95% {
+      margin-left: 40px;
+    }
+    100% {
+      margin-left: 20px;
+    }
+  }
+
+  div{
+    background: $black;
+    border-radius: 15px;
+    width: 15px;
+    height: 15px;
+    float: left;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+
+    &:nth-child(1){
+      animation-name: dot1;
+    }
+    &:nth-child(2){
+      animation-name: dot2;
+    }
+    &:nth-child(3){
+      animation-name: dot3;
+    }
+  }
+}
