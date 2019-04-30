@@ -3,6 +3,14 @@
   margin: auto;
 }
 
+@for $i from 1 through 12 {
+  @media (max-width: 576px) {
+    .container {
+      @include columns(10);
+    }
+  }
+}
+
 .row{
   @include columns(12);
   padding-left: 1rem;
